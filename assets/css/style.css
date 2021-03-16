@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "gothambold";
+  src: url(../fonts/gothamhtf-bold-webfont.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "gothambook";
+  src: url(../fonts/gothamhtf-book-webfont.ttf);
+}
+.banner {
+  background-image: url("../images/banner1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+.banner__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: gothambold;
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+@media screen and (max-width: 768px) {
+  .banner__title {
+    font-size: 2rem;
+    z-index: 10;
+  }
+}
+.banner__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin-left: 5rem;
+}
+.banner__list :not(:last-child) {
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .banner__list {
+    display: none;
+  }
+}
+.banner__link {
+  display: inline-block;
+  font-family: gothambook;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 700;
+  transition: all linear 0.3s;
+}
+.banner__link:hover {
+  color: #414141;
+}
+
+.journal__list {
+  display: flex;
+  overflow: hidden;
+}
+.journal__item {
+  position: relative;
+  max-width: 50%;
+}
+.journal__image {
+  display: block;
+  max-width: 100%;
+}
+.journal__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fefefe;
+  font-family: gothambook;
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.journal__title span {
+  font-size: 2rem;
+  display: block;
+}
+@media screen and (max-width: 375px) {
+  .journal__title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .journal__title span {
+    font-size: 1.6rem;
+  }
+}
+.journal__description {
+  text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  font-family: gothambook;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .journal__description {
+    font-size: 1.4rem;
+  }
+}
+
+.boots__list {
+  display: flex;
+}
+.boots__item {
+  width: 20%;
+}
+.boots__item img {
+  display: block;
+  max-width: 100%;
+}
+
+.footer {
+  padding-bottom: 6rem;
+}
+.footer__container {
+  display: flex;
+  padding: 6rem 8rem;
+  justify-content: space-between;
+}
+@media screen and (max-width: 414px) {
+  .footer__container {
+    display: block;
+  }
+}
+.footer__contact--title {
+  font-size: 1.8rem;
+  font-family: gothambold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 375px) {
+  .footer__contact--title {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .footer__contact {
+    width: 100%;
+  }
+}
+.footer__contact--search {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.footer__contact--search input {
+  width: 48rem;
+  height: 4.6rem;
+  outline: none;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .footer__contact--search input {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .footer__contact--search input {
+    flex: 1;
+  }
+}
+.footer__contact--search button {
+  width: 4.6rem;
+  height: 4.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+  font-family: gothambold;
+  cursor: pointer;
+}
+.footer__contact .socials__list {
+  display: flex;
+  list-style: none;
+}
+.footer__contact .socials__link {
+  margin-right: 3rem;
+  transition: all linear 0.3s;
+}
+.footer__contact .socials__link i {
+  font-size: 2.4rem;
+  color: #000000;
+}
+.footer__contact .socials__link:hover i {
+  color: #1b1b1b;
+}
+.footer__right h3 {
+  font-family: gothambold;
+  font-size: 2rem;
+}
+@media screen and (max-width: 414px) {
+  .footer__right {
+    margin-top: 2rem;
+  }
+}
+.footer__list {
+  list-style: none;
+}
+.footer__link {
+  display: block;
+  color: #0f0f0f;
+  font-size: 1.4rem;
+  font-family: gothambook;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.footer__information {
+  text-align: center;
+}
+.footer__information a {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #000000;
+  font-family: gothambook;
+  font-weight: 600;
+  padding: 0 1rem;
+  position: relative;
+}
+.footer__information a:not(:last-child)::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background: #000000;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__information {
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__link {
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    font-size: 3rem;
+  }
+  .nav__link i {
+    color: #000000;
+  }
+
+  .nav__mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #fefefe;
+    width: 200px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+  }
+  .nav__mobile.active {
+    transform: translateX(0);
+  }
+  .nav__mobile--list {
+    list-style: none;
+    margin: 0;
+  }
+  .nav__mobile--item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .nav__mobile--link {
+    display: block;
+    font-family: gothambook;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  .nav__close--link {
+    color: #181818;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

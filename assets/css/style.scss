@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+@font-face {
+  font-family: 'gothambold';
+  src: url(../fonts/gothamhtf-bold-webfont.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'gothambook';
+  src: url(../fonts/gothamhtf-book-webfont.ttf);
+}
+
+.banner {
+  background-image: url('../images/banner1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: gothambold;
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+      z-index: 10;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-left: 5rem;
+    :not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: gothambook;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    transition: all linear 0.3s;
+    &:hover {
+      color: rgb(65, 65, 65);
+    }
+  }
+}
+
+.journal {
+  &__list {
+    display: flex;
+    overflow: hidden;
+  }
+  &__item {
+    position: relative;
+    max-width: 50%;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fefefe;
+    font-family: gothambook;
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+    text-align: center;
+    span {
+      font-size: 2rem;
+      display: block;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 2.4rem;
+    }
+    @media screen and (max-width: 375px) {
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-family: gothambook;
+    font-size: 1.7rem;
+    font-weight: 600;
+    @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.boots {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 20%;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+}
+
+.footer {
+  padding-bottom: 6rem;
+  &__container {
+    display: flex;
+    padding: 6rem 8rem;
+    justify-content: space-between;
+    @media screen and (max-width: 414px) {
+      display: block;
+    }
+  }
+
+  &__contact {
+    &--title {
+      font-size: 1.8rem;
+      font-family: gothambold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      @media screen and (max-width: 375px) {
+        font-size: 1.6rem;
+      }
+    }
+    @media screen and (max-width: 414px) {
+      width: 100%;
+    }
+
+    &--search {
+      display: flex;
+      margin-bottom: 3rem;
+      input {
+        width: 48rem;
+        height: 4.6rem;
+        outline: none;
+        font-size: 1.8rem;
+        padding: 1rem;
+        // font-family: gothambold;
+        @media screen and (max-width: 768px) {
+          width: 30rem;
+        }
+        @media screen and (max-width: 414px) {
+          flex: 1;
+        }
+      }
+      button {
+        width: 4.6rem;
+        height: 4.6rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background: #000;
+        color: #fff;
+        font-size: 1.4rem;
+        border: none;
+        outline: none;
+        margin-left: 0.5rem;
+        font-family: gothambold;
+        cursor: pointer;
+      }
+
+    }
+
+    .socials {
+      &__list {
+        display: flex;
+        list-style: none;
+      }
+      &__link {
+        margin-right: 3rem;
+        transition: all linear 0.3s;
+        i {
+          font-size: 2.4rem;
+          color: #000000;
+        }
+        &:hover i{
+          color: #1b1b1b;
+        }
+      }
+    }
+
+    
+  }
+
+  &__right {
+    h3 {
+      font-family: gothambold;
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 414px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+  &__link {
+    display: block;
+    color: #0f0f0f;
+    font-size: 1.4rem;
+    font-family: gothambook;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  &__information {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-size: 1.4rem;
+      color: #000000;
+      font-family: gothambook;
+      font-weight: 600;
+      padding: 0 1rem;
+      position: relative;
+      &:not(:last-child ) {
+        &::after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background: #000000;
+        right: 0;
+        bottom: 0;
+      }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      line-height: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__link {
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    font-size: 3rem;
+    i {
+      color: #000000;
+    }
+  }
+
+  .nav__mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #fefefe;
+    width: 200px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    &.active {
+      transform: translateX(0);
+    }
+    &--list {
+      list-style: none;
+      margin: 0;
+    }
+    &--item {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--link {
+      display: block;
+      font-family: gothambook;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: #000000;
+      font-weight: 700;
+    }
+  }
+
+  .nav__close {
+    &--link {
+      color: #181818;
+      font-size: 2rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+
+
